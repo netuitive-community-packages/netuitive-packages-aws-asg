@@ -1,0 +1,111 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "ACE",
+    "id" : null,
+    "packageId" : null,
+    "name" : "AWS ASG",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "ASG",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "netuitive.aws.asg.ec2.cpuutilization",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskreadbytes",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskwritebytes",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskreadops",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskwriteops",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.networkin",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.networkout",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskreadbytespersec",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskwritebytespersec",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskreadopspersec",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskwriteopspersec",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.disktotalopspersec",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskiops",
+      "properties" : {
+        "baseline" : false,
+        "correlation" : false
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.bytesinpersec",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.bytesoutpersec",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : true
+      }
+    }, {
+      "match" : "Utilization",
+      "properties" : {
+        "baseline" : true,
+        "correlation" : false
+      }
+    } ]
+  }
+}

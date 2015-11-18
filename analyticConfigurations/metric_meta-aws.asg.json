@@ -1,0 +1,28 @@
+{
+  "analyticConfiguration" : {
+    "tenantId" : null,
+    "type" : "METRIC_META",
+    "id" : null,
+    "packageId" : null,
+    "name" : "AWS ASG",
+    "scope" : {
+      "elementName" : null,
+      "elementType" : "ASG",
+      "elementTags" : null
+    },
+    "metrics" : [ {
+      "match" : "netuitive.aws.asg.ec2.cpuutilization",
+      "properties" : {
+        "tags" : {
+          "utilization" : true
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.status.*",
+      "properties" : {
+        "validMax" : 5
+      }
+    } ]
+  }
+}

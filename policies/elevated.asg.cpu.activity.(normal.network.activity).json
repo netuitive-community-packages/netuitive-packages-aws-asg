@@ -1,0 +1,59 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Elevated ASG CPU Activity (Normal Network Activity)",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "ASG",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "netuitive.aws.asg.ec2.cpuutilization",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : "defined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.cpuutilization",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : "defined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.bytesinpersec",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : "undefined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.bytesinpersec",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : "undefined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.bytesoutpersec",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : "undefined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.bytesoutpersec",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : "undefined",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 1
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}

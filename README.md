@@ -1,1 +1,2 @@
-# netuitive-packages-aws-asg
+netuitive.packages.aws.asg 1.0.0
+----------------------

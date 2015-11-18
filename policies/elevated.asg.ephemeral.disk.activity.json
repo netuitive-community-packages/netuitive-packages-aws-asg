@@ -1,0 +1,47 @@
+{
+  "policy" : {
+    "id" : null,
+    "name" : "Elevated ASG Ephemeral Disk Activity",
+    "description" : null,
+    "scope" : {
+      "elementName" : "",
+      "elementType" : "ASG",
+      "elementTags" : { }
+    },
+    "duration" : 1800,
+    "conditions" : [ {
+      "metric" : "netuitive.aws.asg.ec2.diskreadopspersec",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : "defined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.diskreadopspersec",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : "defined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.diskwriteopspersec",
+      "wildcard" : null,
+      "analytic" : "baselineDeviation",
+      "operator" : "defined",
+      "level" : null
+    }, {
+      "metric" : "netuitive.aws.asg.ec2.diskwriteopspersec",
+      "wildcard" : null,
+      "analytic" : "contextualDeviation",
+      "operator" : "defined",
+      "level" : null
+    } ],
+    "actions" : [ {
+      "type" : "event",
+      "category" : 1
+    } ],
+    "enabled" : false,
+    "deleted" : false,
+    "originTenantId" : null,
+    "originPolicyId" : null,
+    "lastUpdated" : null
+  }
+}
