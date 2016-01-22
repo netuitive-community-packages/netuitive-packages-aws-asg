@@ -3,7 +3,7 @@
   "version" : "1.0.0",
   "manifest" : {
     "name" : "Netuitive Packages AWS ASG",
-    "description" : "A set of Netuitive analytics configurations, polices, dashboards and reports that are used to monitor AWS ASG performance",
+    "description" : "A set of Netuitive analytics configurations, polices, dashboards, and reports that are used to monitor performance of AWS Auto Scaling Group (ASG) resources.",
     "author" : {
       "name" : "Netuitive Research",
       "email" : "research@netuitive.com"
@@ -24,13 +24,13 @@
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.asg.network.activity.json",
+      "file" : "policies/elevated.asg.ephemeral.disk.activity.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.asg.ephemeral.disk.activity.json",
+      "file" : "policies/elevated.asg.network.activity.json",
       "encoding" : "application/json",
       "content" : null
     }
@@ -53,5 +53,6 @@
       "encoding" : "application/json",
       "content" : null
     }
-  } ]
+  } ],
+  "dashboards" : [ ]
 }

@@ -1,4 +1,4 @@
- {
+{
   "analyticConfiguration" : {
     "tenantId" : null,
     "type" : "COMPUTED_METRIC",
@@ -65,13 +65,6 @@
         "expression" : "data['netuitive.aws.asg.ec2.networkout'].actual == 0 ? 0 : data['netuitive.aws.asg.ec2.networkout'].actual / 300",
         "fqn" : "netuitive.aws.asg.ec2.bytesoutpersec",
         "name" : "Network Bytes Out Per Second"
-      }
-    }, {
-      "match" : "Utilization",
-      "properties" : {
-        "expression" : "data['netuitive.aws.asg.ec2.cpuutilization'].actual",
-        "fqn" : "Utilization",
-        "name" : "Utilization"
       }
     } ]
   }
