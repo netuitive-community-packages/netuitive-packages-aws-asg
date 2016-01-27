@@ -1,7 +1,7 @@
 {
   "policy" : {
     "id" : null,
-    "name" : "Elevated ASG Network Activity",
+    "name" : "AWS ASG - Elevated Network Activity",
     "description" : "Indicates an increase in network activity above what is considered to be normal.\n\nNote: This policy is the same as the corresponding EC2 policy, but it operates on the average network utilization across all EC2's in the ASG.",
     "scope" : {
       "elementName" : "",

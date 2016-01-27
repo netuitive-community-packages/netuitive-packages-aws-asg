@@ -18,19 +18,19 @@
   },
   "policies" : [ {
     "data" : {
-      "file" : "policies/elevated.asg.cpu.activity.(normal.network.activity).json",
+      "file" : "policies/aws.asg.-.elevated.cpu.activity.(normal.network.activity).json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.asg.ephemeral.disk.activity.json",
+      "file" : "policies/aws.asg.-.elevated.ephemeral.disk.activity.json",
       "encoding" : "application/json",
       "content" : null
     }
   }, {
     "data" : {
-      "file" : "policies/elevated.asg.network.activity.json",
+      "file" : "policies/aws.asg.-.elevated.network.activity.json",
       "encoding" : "application/json",
       "content" : null
     }
