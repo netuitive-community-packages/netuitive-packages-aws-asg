@@ -100,12 +100,6 @@
         "baseline" : true,
         "correlation" : true
       }
-    }, {
-      "match" : "Utilization",
-      "properties" : {
-        "baseline" : true,
-        "correlation" : false
-      }
     } ]
   }
 }

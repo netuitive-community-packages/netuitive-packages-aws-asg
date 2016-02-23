@@ -10,16 +10,16 @@
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "netuitive.aws.asg.ec2.cpuutilization",
+      "metric" : "netuitive.aws.asg.ec2.bytesoutpersec",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
-      "operator" : "defined",
+      "operator" : "undefined",
       "level" : null
     }, {
-      "metric" : "netuitive.aws.asg.ec2.cpuutilization",
+      "metric" : "netuitive.aws.asg.ec2.bytesoutpersec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
-      "operator" : "defined",
+      "operator" : "undefined",
       "level" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.bytesinpersec",
@@ -34,23 +34,23 @@
       "operator" : "undefined",
       "level" : null
     }, {
-      "metric" : "netuitive.aws.asg.ec2.bytesoutpersec",
+      "metric" : "netuitive.aws.asg.ec2.cpuutilization",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
-      "operator" : "undefined",
+      "operator" : ">",
       "level" : null
     }, {
-      "metric" : "netuitive.aws.asg.ec2.bytesoutpersec",
+      "metric" : "netuitive.aws.asg.ec2.cpuutilization",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
-      "operator" : "undefined",
+      "operator" : ">",
       "level" : null
     } ],
     "actions" : [ {
       "type" : "event",
       "category" : 1
     } ],
-    "enabled" : true,
+    "enabled" : false,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,
