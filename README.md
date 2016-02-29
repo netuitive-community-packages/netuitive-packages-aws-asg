@@ -1,6 +1,10 @@
-#netuitive.packages.aws.asg 1.0.1
+#netuitive.packages.aws.asg 1.1.0
 
 ##Release History
+
+###Version 1.1.0
+
+* Added units to metrics.
 
 ###Version 1.0.1
 

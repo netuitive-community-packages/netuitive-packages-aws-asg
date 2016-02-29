@@ -11,17 +11,60 @@
       "elementTags" : null
     },
     "metrics" : [ {
-      "match" : "netuitive.aws.asg.ec2.cpuutilization",
+      "match" : "netuitive.aws.asg.ec2.disk.*bytes",
       "properties" : {
         "tags" : {
-          "utilization" : true
-        },
-        "validMax" : 100
+          "unit" : "bytes"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.network.*",
+      "properties" : {
+        "tags" : {
+          "unit" : "bytes"
+        }
       }
     }, {
       "match" : "netuitive.aws.asg.ec2.status.*",
       "properties" : {
         "validMax" : 5
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.cpuutilization",
+      "properties" : {
+        "tags" : {
+          "utilization" : true,
+          "unit" : "percent"
+        },
+        "validMax" : 100
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.*bytes.*persec",
+      "properties" : {
+        "tags" : {
+          "unit" : "Bps"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskreadopspersec",
+      "properties" : {
+        "tags" : {
+          "unit" : "rps"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskwriteopspersec",
+      "properties" : {
+        "tags" : {
+          "unit" : "wps"
+        }
+      }
+    }, {
+      "match" : "netuitive.aws.asg.ec2.diskiops",
+      "properties" : {
+        "tags" : {
+          "unit" : "iops"
+        }
       }
     } ]
   }
