@@ -197,7 +197,7 @@
       "created" : "2016-03-15T18:39:17Z",
       "updated" : "2016-03-15T18:39:49Z"
     } ],
-    "type" : "DEFAULT",
+    "type" : "ASG",
     "private" : false
   }
 }
