@@ -14,43 +14,61 @@
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : "undefined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.bytesoutpersec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : "undefined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.bytesinpersec",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : "undefined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.bytesinpersec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : "undefined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.cpuutilization",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.cpuutilization",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : ">",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",
       "category" : 1
     } ],
-    "enabled" : false,
+    "enabled" : true,
     "deleted" : false,
     "originTenantId" : null,
     "originPolicyId" : null,

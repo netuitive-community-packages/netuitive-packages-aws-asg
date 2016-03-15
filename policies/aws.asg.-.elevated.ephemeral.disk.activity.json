@@ -14,25 +14,37 @@
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : "defined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.diskreadopspersec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : "defined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.diskwriteopspersec",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : "defined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     }, {
       "metric" : "netuitive.aws.asg.ec2.diskwriteopspersec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : "defined",
-      "level" : null
+      "level" : null,
+      "level2" : null,
+      "metricThresholdLevel" : null,
+      "metricThresholdAnalytic" : null
     } ],
     "actions" : [ {
       "type" : "event",
