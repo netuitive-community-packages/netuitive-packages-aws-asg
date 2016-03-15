@@ -1,6 +1,10 @@
-#netuitive.packages.aws.asg 1.1.0
+#netuitive.packages.aws.asg 1.2.0
 
 ##Release History
+
+###Version 1.2.0
+
+* Added ASG-specific element detail page.
 
 ###Version 1.1.0
 
