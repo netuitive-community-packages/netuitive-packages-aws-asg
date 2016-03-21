@@ -5,6 +5,7 @@
 ###Version 1.2.0
 
 * Added ASG-specific element detail page.
+* Fixed policy that wasn't being enabled by default.
 
 ###Version 1.1.0
 
