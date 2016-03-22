@@ -1,6 +1,11 @@
-#netuitive.packages.aws.asg 1.1.0
+#netuitive.packages.aws.asg 1.2.0
 
 ##Release History
+
+###Version 1.2.0
+
+* Added ASG-specific element detail page.
+* Fixed policy that wasn't being enabled by default.
 
 ###Version 1.1.0
 
