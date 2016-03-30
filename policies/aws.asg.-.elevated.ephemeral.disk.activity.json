@@ -10,7 +10,7 @@
     },
     "duration" : 1800,
     "conditions" : [ {
-      "metric" : "netuitive.aws.asg.ec2.diskreadopspersec",
+      "metric" : "netuitive.aws.ec2.diskreadopspersec",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : "defined",
@@ -19,7 +19,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "netuitive.aws.asg.ec2.diskreadopspersec",
+      "metric" : "netuitive.aws.ec2.diskreadopspersec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : "defined",
@@ -28,7 +28,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "netuitive.aws.asg.ec2.diskwriteopspersec",
+      "metric" : "netuitive.aws.ec2.diskwriteopspersec",
       "wildcard" : null,
       "analytic" : "baselineDeviation",
       "operator" : "defined",
@@ -37,7 +37,7 @@
       "metricThresholdLevel" : null,
       "metricThresholdAnalytic" : null
     }, {
-      "metric" : "netuitive.aws.asg.ec2.diskwriteopspersec",
+      "metric" : "netuitive.aws.ec2.diskwriteopspersec",
       "wildcard" : null,
       "analytic" : "contextualDeviation",
       "operator" : "defined",
