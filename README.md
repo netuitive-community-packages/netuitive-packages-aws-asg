@@ -1,6 +1,13 @@
-#netuitive.packages.aws.asg 1.2.0
+#netuitive.packages.aws.asg 1.3.0
 
 ##Release History
+
+###Version 1.3.0
+
+* Added ASG Summary dashboard.
+* Updated computed metrics to work with the new metric names from the ASG collector.
+* Updated policies to work with the new computed metrics.
+* Improved the "AWS ASG - Elevated CPU Activity (Normal Network Activity)" policy; it will no longer fire if the CPU value is less than 20%.
 
 ###Version 1.2.0
 
