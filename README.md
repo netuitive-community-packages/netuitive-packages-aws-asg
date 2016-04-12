@@ -4,6 +4,10 @@ For detailed information on this package, please refer to the [online documentat
 
 ##Release History
 
+###Version 1.3.1
+
+* Temporarily remove ASG Summary dashboard and ASG-specific element detail summary page. These were built to reference the metric names in the new AWS ingest code, which are different from the ones in the old code. The new code is not quite ready for production.
+
 ###Version 1.3.0
 
 * Added ASG Summary dashboard.
