@@ -1,8 +1,12 @@
-#netuitive.packages.aws.asg 1.3.1
+#netuitive.packages.aws.asg 1.3.2
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.3.2
+
+* Re-enabled the ASG Summary dashboard and ASG-specific element detail summary page.
 
 ###Version 1.3.1
 
