@@ -66,6 +66,13 @@
         "fqn" : "netuitive.aws.ec2.bytesoutpersec",
         "name" : "Network Bytes Out Per Second"
       }
+    }, {
+      "match" : "netuitive.aws.autoscaling.grouptotalinstances",
+      "properties" : {
+        "expression" : "attribute['totalInstances'].value",
+        "fqn" : "netuitive.aws.autoscaling.grouptotalinstances",
+        "name" : "Total Instances"
+      }
     } ]
   }
 }
