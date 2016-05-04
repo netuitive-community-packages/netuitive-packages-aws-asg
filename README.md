@@ -1,8 +1,12 @@
-#netuitive.packages.aws.asg 1.3.2
+#netuitive.packages.aws.asg 1.3.3
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.3.3
+
+* Added a new computed metric for total instance count. This is currently available as an attribute, but making it a metric allows us to graph it over time. Customers with detailed monitoring enabled will already get this information in a collected metric (aws.autoscaling.grouptotalinstances), so this is primarily to benefit those customers without detailed monitoring.
 
 ###Version 1.3.2
 
