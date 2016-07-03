@@ -1,8 +1,12 @@
-#netuitive.packages.aws.asg 1.3.4
+#netuitive.packages.aws.asg 1.3.5
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.3.5
+
+* Fixed bugs: elevated activity policies for disk and network were looking for any deviations, rather than upper deviations.
 
 ###Version 1.3.4
 
