@@ -1,8 +1,12 @@
-#netuitive.packages.aws.asg 1.3.5
+#netuitive.packages.aws.asg 1.3.6
 
 For detailed information on this package, please refer to the [online documentation](https://help.app.netuitive.com/Content/Misc/Datasources/AWS/new_aws_datasource.htm).
 
 ##Release History
+
+###Version 1.3.6
+
+* Bug fix for the multi-metric widgets on the element detail page.
 
 ###Version 1.3.5
 
