@@ -150,17 +150,20 @@
         "selectedAttributes" : "[]",
         "elementScopeTags" : "[]",
         "useElementNameContains" : "true",
+        "useAllElementScopeTags" : "false",
         "element_id" : null,
-        "elementScopeTypes" : "[]",
+        "elementScopeTypes" : "[\"ASG\"]",
         "metricLimit" : "10",
+        "useAllMetricScopeTags" : "false",
         "metricUnit" : null,
         "metricAggs" : "[]",
         "elementScopeIds" : "[]",
         "elementScopeAttributes" : "[]",
         "groupName" : null,
-        "elementNameContains" : "Test ASG",
+        "elementNameContains" : "",
         "showHighest" : "true",
         "metric_fqn" : null,
+        "metricScopeTags" : "[]",
         "width" : "medium",
         "metrics" : "[{\"fqn\":\"aws.ec2.networkin\",\"aggFns\":[]},{\"fqn\":\"aws.ec2.networkout\",\"aggFns\":[]}]",
         "selectedTab" : "table"
@@ -168,7 +171,7 @@
       "dashboardId" : null,
       "userId" : null,
       "created" : "2016-03-16T13:47:00Z",
-      "updated" : "2016-03-16T13:47:27Z"
+      "updated" : "2016-07-14T09:42:33Z"
     }, {
       "id" : "78c045fd-7ff2-4fcd-89e5-e31c465a7263",
       "name" : "Current CPU Utilization",
