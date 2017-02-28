@@ -1,8 +1,12 @@
-#netuitive.packages.aws.asg 1.3.7
+#netuitive.packages.aws.asg 1.4.0
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
 ##Release History
+
+###Version 1.4.0
+
+* Updated gridstack dashboard layouts
 
 ###Version 1.3.7
 
