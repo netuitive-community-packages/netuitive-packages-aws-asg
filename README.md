@@ -4,7 +4,7 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
-### Version Next
+### Version 1.5.0
 
 * Update to AWS ASG Summary dashboard
 * Improved Element Details dashboard
