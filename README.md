@@ -1,8 +1,13 @@
-# netuitive.packages.aws.asg 1.4.0
+# netuitive.packages.aws.asg
 
 For detailed information on this package, please refer to the [online documentation](https://help.netuitive.com/Content/Integrations/aws.htm).
 
 ## Release History
+
+### Version 1.5.0
+
+* Update to AWS ASG Summary dashboard
+* Improved Element Details dashboard
 
 ### Version 1.4.0
 
