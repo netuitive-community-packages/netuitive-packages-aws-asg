@@ -29,7 +29,7 @@
         }
       }
     }, {
-      "match" : "aws.ec2.network.*",
+      "match" : "aws.ec2.network(in|out)",
       "properties" : {
         "STATISTIC" : "sum",
         "tags" : {
