@@ -1,84 +1,89 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "METRIC_META",
-    "id" : null,
-    "packageId" : null,
-    "name" : "AWS ASG",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "ASG",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "aws.ec2.cpucreditusage",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "aws.ec2.disk.*",
+        "properties": {
+          "STATISTIC": "sum"
+        }
+      },
+      {
+        "match": "aws.ec2.disk.*bytes",
+        "properties": {
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.ec2.network(in|out)",
+        "properties": {
+          "STATISTIC": "sum",
+          "tags": {
+            "unit": "bytes"
+          }
+        }
+      },
+      {
+        "match": "aws.ec2.status.*",
+        "properties": {
+          "STATISTIC": "sum",
+          "validMax": 5
+        }
+      },
+      {
+        "match": "aws.ec2.cpuutilization",
+        "properties": {
+          "tags": {
+            "unit": "percent",
+            "utilization": true
+          },
+          "validMax": 100
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.*bytes.*persec",
+        "properties": {
+          "tags": {
+            "unit": "Bps"
+          }
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.diskreadopspersec",
+        "properties": {
+          "tags": {
+            "unit": "rps"
+          }
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.diskwriteopspersec",
+        "properties": {
+          "tags": {
+            "unit": "wps"
+          }
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.diskiops",
+        "properties": {
+          "tags": {
+            "unit": "iops"
+          }
+        }
+      }
+    ],
+    "name": "AWS ASG",
+    "scope": {
+      "elementType": "ASG"
     },
-    "metrics" : [ {
-      "match" : "aws.ec2.cpucreditusage",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "aws.ec2.disk.*",
-      "properties" : {
-        "STATISTIC" : "sum"
-      }
-    }, {
-      "match" : "aws.ec2.disk.*bytes",
-      "properties" : {
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.ec2.network(in|out)",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "tags" : {
-          "unit" : "bytes"
-        }
-      }
-    }, {
-      "match" : "aws.ec2.status.*",
-      "properties" : {
-        "STATISTIC" : "sum",
-        "validMax" : 5
-      }
-    }, {
-      "match" : "aws.ec2.cpuutilization",
-      "properties" : {
-        "tags" : {
-          "utilization" : true,
-          "unit" : "percent"
-        },
-        "validMax" : 100
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.*bytes.*persec",
-      "properties" : {
-        "tags" : {
-          "unit" : "Bps"
-        }
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.diskreadopspersec",
-      "properties" : {
-        "tags" : {
-          "unit" : "rps"
-        }
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.diskwriteopspersec",
-      "properties" : {
-        "tags" : {
-          "unit" : "wps"
-        }
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.diskiops",
-      "properties" : {
-        "tags" : {
-          "unit" : "iops"
-        }
-      }
-    } ]
+    "type": "METRIC_META"
   }
 }
