@@ -32,6 +32,7 @@
           "elementScopeTypes": "[\"ASG\"]",
           "metricAgg": "avg",
           "metricLimit": "5",
+          "metricUnit": "percent",
           "metric_fqn": "aws.ec2.cpuutilization",
           "showElementTotal": "true",
           "showHighest": "true",
