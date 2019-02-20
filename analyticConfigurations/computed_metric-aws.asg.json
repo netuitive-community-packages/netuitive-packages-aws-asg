@@ -1,79 +1,107 @@
 {
-  "analyticConfiguration" : {
-    "tenantId" : null,
-    "type" : "COMPUTED_METRIC",
-    "id" : null,
-    "packageId" : null,
-    "name" : "AWS ASG",
-    "scope" : {
-      "elementName" : null,
-      "elementType" : "ASG",
-      "elementTags" : null,
-      "metricMatches" : null
+  "analyticConfiguration": {
+    "metrics": [
+      {
+        "match": "netuitive.aws.ec2.diskreadbytespersec",
+        "properties": {
+          "expressions": [
+            "${aws.ec2.diskreadbytes}.actual / 300"
+          ],
+          "fqn": "netuitive.aws.ec2.diskreadbytespersec",
+          "name": "Ephemeral Disk Read Bytes Per Second"
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.diskwritebytespersec",
+        "properties": {
+          "expressions": [
+            "${aws.ec2.diskwritebytes}.actual / 300",
+            "0"
+          ],
+          "fqn": "netuitive.aws.ec2.diskwritebytespersec",
+          "name": "Ephemeral Disk Write Bytes Per Second"
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.diskreadopspersec",
+        "properties": {
+          "expressions": [
+            "${aws.ec2.diskreadops}.actual / 300",
+            "0"
+          ],
+          "fqn": "netuitive.aws.ec2.diskreadopspersec",
+          "name": "Ephemeral Disk Read Ops Per Second"
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.diskwriteopspersec",
+        "properties": {
+          "expressions": [
+            "${aws.ec2.diskwriteops}.actual / 300",
+            "0"
+          ],
+          "fqn": "netuitive.aws.ec2.diskwriteopspersec",
+          "name": "Ephemeral Disk Write Ops Per Second"
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.disktotalops",
+        "properties": {
+          "expressions": [
+            "${aws.ec2.diskreadops}.actual + ${aws.ec2.diskwriteops}.actual"
+          ],
+          "fqn": "netuitive.aws.ec2.disktotalops",
+          "name": "Ephemeral Disk Total Ops"
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.diskiops",
+        "properties": {
+          "expressions": [
+            "${netuitive.aws.ec2.disktotalops}.actual / 300",
+            "0"
+          ],
+          "fqn": "netuitive.aws.ec2.diskiops",
+          "name": "Ephemeral Disk IOPS"
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.bytesinpersec",
+        "properties": {
+          "expressions": [
+            "${aws.ec2.networkin}.actual / 300",
+            "0"
+          ],
+          "fqn": "netuitive.aws.ec2.bytesinpersec",
+          "name": "Network Bytes In Per Second"
+        }
+      },
+      {
+        "match": "netuitive.aws.ec2.bytesoutpersec",
+        "properties": {
+          "expressions": [
+            "${aws.ec2.networkout}.actual / 300",
+            "0"
+          ],
+          "fqn": "netuitive.aws.ec2.bytesoutpersec",
+          "name": "Network Bytes Out Per Second"
+        }
+      },
+      {
+        "match": "netuitive.aws.autoscaling.grouptotalinstances",
+        "properties": {
+          "expressions": [
+            "attribute(totalInstances).value"
+          ],
+          "fqn": "netuitive.aws.autoscaling.grouptotalinstances",
+          "name": "Total Instances"
+        }
+      }
+    ],
+    "name": "AWS ASG",
+    "scope": {
+      "elementType": "ASG"
     },
-    "metrics" : [ {
-      "match" : "netuitive.aws.ec2.diskreadbytespersec",
-      "properties" : {
-        "expression" : "data['aws.ec2.diskreadbytes'].actual == 0 ? 0 : data['aws.ec2.diskreadbytes'].actual / 300",
-        "fqn" : "netuitive.aws.ec2.diskreadbytespersec",
-        "name" : "Ephemeral Disk Read Bytes Per Second"
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.diskwritebytespersec",
-      "properties" : {
-        "expression" : "data['aws.ec2.diskwritebytes'].actual == 0 ? 0 : data['aws.ec2.diskwritebytes'].actual / 300",
-        "fqn" : "netuitive.aws.ec2.diskwritebytespersec",
-        "name" : "Ephemeral Disk Write Bytes Per Second"
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.diskreadopspersec",
-      "properties" : {
-        "expression" : "data['aws.ec2.diskreadops'].actual == 0 ? 0 : data['aws.ec2.diskreadops'].actual / 300",
-        "fqn" : "netuitive.aws.ec2.diskreadopspersec",
-        "name" : "Ephemeral Disk Read Ops Per Second"
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.diskwriteopspersec",
-      "properties" : {
-        "expression" : "data['aws.ec2.diskwriteops'].actual == 0 ? 0 : data['aws.ec2.diskwriteops'].actual / 300",
-        "fqn" : "netuitive.aws.ec2.diskwriteopspersec",
-        "name" : "Ephemeral Disk Write Ops Per Second"
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.disktotalops",
-      "properties" : {
-        "expression" : "data['aws.ec2.diskreadops'].actual + data['aws.ec2.diskwriteops'].actual",
-        "fqn" : "netuitive.aws.ec2.disktotalops",
-        "name" : "Ephemeral Disk Total Ops"
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.diskiops",
-      "properties" : {
-        "expression" : "data['netuitive.aws.ec2.disktotalops'].actual == 0 ? 0 : data['netuitive.aws.ec2.disktotalops'].actual / 300",
-        "fqn" : "netuitive.aws.ec2.diskiops",
-        "name" : "Ephemeral Disk IOPS"
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.bytesinpersec",
-      "properties" : {
-        "expression" : "data['aws.ec2.networkin'].actual == 0 ? 0 : data['aws.ec2.networkin'].actual / 300",
-        "fqn" : "netuitive.aws.ec2.bytesinpersec",
-        "name" : "Network Bytes In Per Second"
-      }
-    }, {
-      "match" : "netuitive.aws.ec2.bytesoutpersec",
-      "properties" : {
-        "expression" : "data['aws.ec2.networkout'].actual == 0 ? 0 : data['aws.ec2.networkout'].actual / 300",
-        "fqn" : "netuitive.aws.ec2.bytesoutpersec",
-        "name" : "Network Bytes Out Per Second"
-      }
-    }, {
-      "match" : "netuitive.aws.autoscaling.grouptotalinstances",
-      "properties" : {
-        "expression" : "attribute['totalInstances'].value",
-        "fqn" : "netuitive.aws.autoscaling.grouptotalinstances",
-        "name" : "Total Instances"
-      }
-    } ]
+    "type": "COMPUTED_METRIC"
   }
 }

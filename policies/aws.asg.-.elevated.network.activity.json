@@ -1,68 +1,40 @@
 {
-  "policy" : {
-    "id" : null,
-    "name" : "AWS ASG - Elevated Network Activity",
-    "description" : "Indicates an increase in network activity above what is considered to be normal.\n\nNote: This policy is the same as the corresponding EC2 policy, but it operates on the average network utilization across all EC2's in the ASG.",
-    "scope" : {
-      "elementName" : "",
-      "elementNameExclude" : null,
-      "fqnIncludes" : [ ],
-      "fqnExcludes" : [ ],
-      "elementType" : "ASG",
-      "elementTags" : { }
-    },
-    "duration" : 1800,
-    "conditions" : [ {
-      "metric" : "netuitive.aws.ec2.bytesinpersec",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "netuitive.aws.ec2.bytesinpersec",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "netuitive.aws.ec2.bytesoutpersec",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "baselineDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    }, {
-      "metric" : "netuitive.aws.ec2.bytesoutpersec",
-      "wildcard" : null,
-      "metricScopeTags" : { },
-      "analytic" : "contextualDeviation",
-      "operator" : ">",
-      "level" : null,
-      "level2" : null,
-      "metricThresholdLevel" : null,
-      "metricThresholdAnalytic" : null
-    } ],
-    "eventConditions" : [ ],
-    "actions" : [ {
-      "type" : "event",
-      "category" : 1
-    } ],
-    "enabled" : true,
-    "deleted" : false,
-    "originTenantId" : null,
-    "originPolicyId" : null,
-    "creatorEmail" : null,
-    "lastUpdated" : null
+  "policy": {
+    "actions": [
+      {
+        "category": 1,
+        "type": "event"
+      }
+    ],
+    "conditions": [
+      {
+        "analytic": "baselineDeviation",
+        "metric": "netuitive.aws.ec2.bytesinpersec",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "netuitive.aws.ec2.bytesinpersec",
+        "operator": ">"
+      },
+      {
+        "analytic": "baselineDeviation",
+        "metric": "netuitive.aws.ec2.bytesoutpersec",
+        "operator": ">"
+      },
+      {
+        "analytic": "contextualDeviation",
+        "metric": "netuitive.aws.ec2.bytesoutpersec",
+        "operator": ">"
+      }
+    ],
+    "deleted": false,
+    "description": "Indicates an increase in network activity above what is considered to be normal.\n\nNote: This policy is the same as the corresponding EC2 policy, but it operates on the average network utilization across all EC2's in the ASG.",
+    "duration": 1800,
+    "enabled": true,
+    "name": "AWS ASG - Elevated Network Activity",
+    "scope": {
+      "elementType": "ASG"
+    }
   }
 }

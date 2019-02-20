@@ -1,119 +1,82 @@
 {
-  "dashboard" : {
-    "name" : "AWS ASG Summary",
-    "description" : null,
-    "layout" : null,
-    "properties" : {
-      "integrationType" : null,
-      "timeRangeDuration" : "3600",
-      "gridstackContents" : "[{\"id\":\"00a32dac-cf5b-46d7-9ddd-6cf9855c975c\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"a566a3d0-91fe-4c57-92d5-31daf0744cf3\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"e4ad04ad-9816-406e-bd6e-7121e425de45\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"1b20d89e-6803-4208-9b81-f6bef2c8b707\",\"x\":6,\"y\":0,\"width\":6,\"height\":9}]",
-      "refreshIntervalSeconds" : "300",
-      "wrap" : "true"
+  "dashboard": {
+    "name": "AWS ASG Summary",
+    "private": false,
+    "properties": {
+      "gridstackContents": "[{\"id\":\"00a32dac-cf5b-46d7-9ddd-6cf9855c975c\",\"x\":0,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"a566a3d0-91fe-4c57-92d5-31daf0744cf3\",\"x\":0,\"y\":0,\"width\":6,\"height\":9},{\"id\":\"e4ad04ad-9816-406e-bd6e-7121e425de45\",\"x\":6,\"y\":9,\"width\":6,\"height\":9},{\"id\":\"1b20d89e-6803-4208-9b81-f6bef2c8b707\",\"x\":6,\"y\":0,\"width\":6,\"height\":9}]",
+      "refreshIntervalSeconds": "300",
+      "timeRangeDuration": "3600",
+      "wrap": "true"
     },
-    "widgets" : [ {
-      "id" : "00a32dac-cf5b-46d7-9ddd-6cf9855c975c",
-      "name" : "ASG Network In",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"ASG\"]",
-        "metricLimit" : "5",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.ec2.networkin",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
+    "type": "DEFAULT",
+    "widgets": [
+      {
+        "id": "00a32dac-cf5b-46d7-9ddd-6cf9855c975c",
+        "name": "ASG Network In",
+        "properties": {
+          "elementScopeTypes": "[\"ASG\"]",
+          "metricLimit": "5",
+          "metric_fqn": "aws.ec2.networkin",
+          "selectedTab": "graph",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "high-low-metric"
+      },
+      {
+        "id": "a566a3d0-91fe-4c57-92d5-31daf0744cf3",
+        "name": "Highest CPU Utilization",
+        "properties": {
+          "elementScopeTypes": "[\"ASG\"]",
+          "metricAgg": "avg",
+          "metricLimit": "5",
+          "metricUnit": "percent",
+          "metric_fqn": "aws.ec2.cpuutilization",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "tableColumns": "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricUnit\":null}]",
+          "useAllElementScopeAttributes": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "visualization": "bar"
+        },
+        "widgetType": "metric-range"
+      },
+      {
+        "id": "1b20d89e-6803-4208-9b81-f6bef2c8b707",
+        "name": "ASG Events",
+        "properties": {
+          "elementScopeTypes": "[\"ASG\"]",
+          "metricAgg": "avg",
+          "metricLimit": "10",
+          "metrics": "[{\"fqn\":null,\"useRegex\":false,\"aggFns\":[]}]",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "tableColumns": "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricUnit\":null}]",
+          "useAllElementScopeAttributes": "true",
+          "useAllElementScopeTags": "true",
+          "useAllMetricScopeTags": "true",
+          "visualization": "summary heat map"
+        },
+        "widgetType": "events"
+      },
+      {
+        "id": "e4ad04ad-9816-406e-bd6e-7121e425de45",
+        "name": "ASG Network Out",
+        "properties": {
+          "elementScopeTypes": "[\"ASG\"]",
+          "metricLimit": "5",
+          "metric_fqn": "aws.ec2.networkout",
+          "selectedTab": "graph",
+          "showElementTotal": "true",
+          "showHighest": "true",
+          "useElementNameContains": "true",
+          "width": "auto"
+        },
+        "widgetType": "high-low-metric"
       }
-    }, {
-      "id" : "a566a3d0-91fe-4c57-92d5-31daf0744cf3",
-      "name" : "Highest CPU Utilization",
-      "description" : null,
-      "widgetType" : "metric-range",
-      "properties" : {
-        "visualization" : "bar",
-        "tableColumns" : "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricUnit\":null}]",
-        "showElementTotal" : "true",
-        "elementScopeTags" : "[]",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"ASG\"]",
-        "metricLimit" : "5",
-        "useAllMetricScopeTags" : "true",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.ec2.cpuutilization",
-        "metricScopeTags" : "[]",
-        "useAllElementScopeAttributes" : "true",
-        "metricAgg" : "avg",
-        "metrics" : "[]"
-      }
-    }, {
-      "id" : "1b20d89e-6803-4208-9b81-f6bef2c8b707",
-      "name" : "ASG Events",
-      "description" : null,
-      "widgetType" : "events",
-      "properties" : {
-        "visualization" : "summary heat map",
-        "tableColumns" : "[{\"columnType\":\"elementType\",\"width\":\"10%\"},{\"columnType\":\"elementName\",\"width\":\"80%\"},{\"columnType\":\"metric\",\"width\":\"10%\",\"metricDisplayName\":null,\"metricFqn\":null,\"metricAggFn\":null,\"metricUnit\":null}]",
-        "showElementTotal" : "true",
-        "elementScopeTags" : "[]",
-        "useAllElementScopeTags" : "true",
-        "elementScopeTypes" : "[\"ASG\"]",
-        "metricLimit" : "10",
-        "useAllMetricScopeTags" : "true",
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "showHighest" : "true",
-        "metricScopeTags" : "[]",
-        "useAllElementScopeAttributes" : "true",
-        "metricAgg" : "avg",
-        "metrics" : "[{\"fqn\":null,\"useRegex\":false,\"aggFns\":[]}]"
-      }
-    }, {
-      "id" : "e4ad04ad-9816-406e-bd6e-7121e425de45",
-      "name" : "ASG Network Out",
-      "description" : null,
-      "widgetType" : "high-low-metric",
-      "properties" : {
-        "visualization" : null,
-        "showElementTotal" : "true",
-        "selectedAttributes" : "[]",
-        "elementScopeTags" : "[]",
-        "useElementNameContains" : "true",
-        "element_id" : null,
-        "elementScopeTypes" : "[\"ASG\"]",
-        "metricLimit" : "5",
-        "metricUnit" : null,
-        "metricAggs" : "[]",
-        "elementScopeIds" : "[]",
-        "elementScopeAttributes" : "[]",
-        "groupName" : null,
-        "elementNameContains" : null,
-        "showHighest" : "true",
-        "metric_fqn" : "aws.ec2.networkout",
-        "width" : "auto",
-        "metrics" : "[]",
-        "selectedTab" : "graph"
-      }
-    } ],
-    "type" : "DEFAULT",
-    "private" : false
+    ]
   }
 }

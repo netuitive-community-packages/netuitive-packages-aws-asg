@@ -4,6 +4,14 @@ For detailed information on this package, please refer to the [online documentat
 
 ## Release History
 
+### Version next
+
+### Version 1.6.0
+
+* Convert computed metrics to new format
+* Adjusted build to use metricly-cli for validation
+* Added percent unit to highest cpu utilization widget
+
 ### Version 1.5.1
 
 * Fix for network metrics match expression
