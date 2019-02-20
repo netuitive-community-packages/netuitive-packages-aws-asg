@@ -5,8 +5,7 @@
         "match": "netuitive.aws.ec2.diskreadbytespersec",
         "properties": {
           "expressions": [
-            "${aws.ec2.diskreadbytes}.actual / 300",
-            "0"
+            "${aws.ec2.diskreadbytes}.actual / 300"
           ],
           "fqn": "netuitive.aws.ec2.diskreadbytespersec",
           "name": "Ephemeral Disk Read Bytes Per Second"
@@ -49,8 +48,7 @@
         "match": "netuitive.aws.ec2.disktotalops",
         "properties": {
           "expressions": [
-            "${aws.ec2.diskreadops}.actual + ${aws.ec2.diskwriteops}.actual",
-            "0"
+            "${aws.ec2.diskreadops}.actual + ${aws.ec2.diskwriteops}.actual"
           ],
           "fqn": "netuitive.aws.ec2.disktotalops",
           "name": "Ephemeral Disk Total Ops"
@@ -93,8 +91,7 @@
         "match": "netuitive.aws.autoscaling.grouptotalinstances",
         "properties": {
           "expressions": [
-            "attribute(totalInstances).value",
-            "0"
+            "attribute(totalInstances).value"
           ],
           "fqn": "netuitive.aws.autoscaling.grouptotalinstances",
           "name": "Total Instances"
