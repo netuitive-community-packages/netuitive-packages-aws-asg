@@ -2,6 +2,8 @@
 
 ### Version next
 
+* Fix an attribute computed metric with the wrong syntax
+
 ### Version 1.6.0
 
 * Convert computed metrics to new format

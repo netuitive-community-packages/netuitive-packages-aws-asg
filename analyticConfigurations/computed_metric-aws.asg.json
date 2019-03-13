@@ -91,7 +91,7 @@
         "match": "netuitive.aws.autoscaling.grouptotalinstances",
         "properties": {
           "expressions": [
-            "attribute(totalInstances).value"
+            "attribute(totalInstances)"
           ],
           "fqn": "netuitive.aws.autoscaling.grouptotalinstances",
           "name": "Total Instances"
