@@ -2,6 +2,8 @@
 
 ### Version next
 
+### Version 1.6.1
+
 * Fix an attribute computed metric with the wrong syntax
 
 ### Version 1.6.0
