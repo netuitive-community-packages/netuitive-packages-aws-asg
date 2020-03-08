@@ -34,7 +34,9 @@
     "enabled": true,
     "name": "AWS ASG - Elevated Network Activity",
     "scope": {
-      "elementType": "ASG"
+      "elementTypes": [
+        "ASG"
+      ]
     }
   }
 }

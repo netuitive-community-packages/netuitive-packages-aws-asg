@@ -34,7 +34,9 @@
     "enabled": true,
     "name": "AWS ASG - Elevated Ephemeral Disk Activity",
     "scope": {
-      "elementType": "ASG"
+      "elementTypes": [
+        "ASG"
+      ]
     }
   }
 }

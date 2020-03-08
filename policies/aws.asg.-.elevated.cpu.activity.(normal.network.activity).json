@@ -50,7 +50,9 @@
     "enabled": true,
     "name": "AWS ASG - Elevated CPU Activity (Normal Network Activity)",
     "scope": {
-      "elementType": "ASG"
+      "elementTypes": [
+        "ASG"
+      ]
     }
   }
 }
