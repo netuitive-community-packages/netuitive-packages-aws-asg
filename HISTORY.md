@@ -2,6 +2,8 @@
 
 ### Version next
 
+* Convert single elementType to elementTypes array in policy scope
+
 ### Version 1.6.1
 
 * Fix an attribute computed metric with the wrong syntax
